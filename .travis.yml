@@ -11,6 +11,7 @@ install:
 - sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 script:
 - (cd tests && ./run_tests)
+- python nototools/merge_fonts.py -d fonts
 deploy:
   provider: pypi
   user: __token__
